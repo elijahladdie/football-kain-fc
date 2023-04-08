@@ -14,7 +14,7 @@ const Login = () => {
       <div class="w-full   flex flex-col justify-center h-screen items-center ">
         <span
           className={` bg-white/30 backdrop-blur-2xl rounded-xl border border-slate-600 transition-all   opacity-25 ${
-            isSignUp ? "h-[600px]" : "h-96"
+            isSignUp ? "h-[400px]" : "h-[300px]"
           }  w-96 `}
         ></span>
         <form class=" absolute    rounded px-8 pt-6 pb-8 mb-4  ">
@@ -35,19 +35,7 @@ const Login = () => {
 
           {isSignUp && (
             <>
-              <div class="mb-6">
-                <label
-                  class="block text-white text-sm font-bold mb-2"
-                  for="phone"
-                >
-                  Phone
-                </label>
-                <input
-                  class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight bg-white focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="Enter your Phone"
-                />
-              </div>
+              
               <div class="mb-4">
                 <label
                   class="block text-white text-sm font-bold mb-2"

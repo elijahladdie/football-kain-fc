@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav'
-import Empty from './Empty';
+import Empty from '../components/Empty';
 
 function Projects() {
   useEffect(()=>{
@@ -10,7 +10,7 @@ function Projects() {
   return (
     <div>
       <Nav />
-      <Empty/>
+      <Empty page={"Project"}/>
       <Footer/>
 
     </div>

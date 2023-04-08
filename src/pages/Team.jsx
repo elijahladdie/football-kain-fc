@@ -1,7 +1,8 @@
 import React,{useEffect} from 'react';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav'
-import Empty from './Empty';
+import TeamPlayers from '../components/TeamPlayers';
+
 
 function Team() {
   useEffect(()=>{
@@ -10,7 +11,8 @@ function Team() {
   return (
     <div>
       <Nav />
-      <Empty/>
+      <TeamPlayers />
+
       <Footer/>
 
     </div>

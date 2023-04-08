@@ -1,8 +1,7 @@
 import React,{useEffect} from 'react';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav'
-import Empty from './Empty'
-
+import Matches from '../components/Matches';
 function Match() {
   useEffect(()=>{
     document.title = "Kain FC | Match"
@@ -10,7 +9,7 @@ function Match() {
   return (
     <div>
       <Nav />
-      <Empty/>
+      <Matches/>
       <Footer/>
 
     </div>
