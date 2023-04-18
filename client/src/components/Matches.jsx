@@ -7,7 +7,6 @@ const Matches = () => {
   const handleChange = (e) => {
   setSelectValue({ [e.target.name]: e.target.value })
   console.log(selectValue)
-
   }
   return (
     <>
@@ -17,7 +16,6 @@ const Matches = () => {
         <option value="Yesterday">Yesterday</option>
         <option value="Last Week">Last Week</option>
         <option value="Last Month">Last Month</option>
-
       </select>
 
       {(selectValue.time != "null") ? <GetMatches time={selectValue.time} /> : <Empty page={"Match"} />}

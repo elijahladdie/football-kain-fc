@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import img from "../../assets/img/bg-unkown.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const Navigate = useNavigate()
+const toHome = () =>{
+return Navigate('/admin/app/dashboard')
+}
   return (
     <div className=""
       style={{
@@ -68,24 +73,16 @@ const Login = () => {
           <div class="flex items-center justify-between">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-              onClick={() => {
-                isSignUp == true
-                  ? setIsSignUp(!isSignUp)
-                  : window.location.replace("/");
-              }}
+              type="button"             
+              onClick={() => isSignUp ? setIsSignUp(!isSignUp) : toHome()} 
             >
               Sign In
             </button> or
             <button
               class=" mx-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
-              onClick={() => {
-            if (isSignUp == true) {
-                } else {
-                  setIsSignUp(!isSignUp);
-                }
-              }}
+              onClick={() => isSignUp ? '': setIsSignUp(!isSignUp)}
+              
             >
               Sign Up
             </button>

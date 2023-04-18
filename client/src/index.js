@@ -9,6 +9,7 @@ import Team from "./pages/Team";
 import Match from "./pages/Match";
 import Announcement from "./pages/Announcement";
 import Projects from "./pages/Projects";
+import Admin from "./pages/admin/Admin";
 
 
 const router = createBrowserRouter([
@@ -28,8 +29,11 @@ const router = createBrowserRouter([
     path:"/projects",
     element:<Projects/>
   },{
-    path:"/login",
+    path:"/admin/portal/login",
     element:<Login/>
+  },{
+    path:"/admin/app/dashboard",
+    element:<Admin/>
   },{
     path:"*",
     element:<NotFound/>
