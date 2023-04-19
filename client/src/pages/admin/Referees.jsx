@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import MatchList from '../../components/admin/MatchList';
 import Nav from '../../components/admin/Nav'
 import Loading from '../../components/Loading';
-import Form from '../../components/admin/Form';
 import Dashboard from '../../components/admin/Dashboard';
+import RefereesList from '../../components/admin/RefereesList';
 
 
-const Admin = () => {
+const Referees = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => setLoading(false), 300)
@@ -18,10 +17,10 @@ const Admin = () => {
     <div  className='min-h-screen dark:bg-gray-900'>
       <Nav />
       <span className='w-64'/>
-      <Dashboard/>
+      <RefereesList/>
     </div>
   )
 }
 
 
-export default Admin
+export default Referees

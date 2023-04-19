@@ -10,6 +10,10 @@ import Match from "./pages/Match";
 import Announcement from "./pages/Announcement";
 import Projects from "./pages/Projects";
 import Admin from "./pages/admin/Admin";
+import Adverseries from "./pages/admin/Adverseries";
+import Matches from "./pages/admin/Matches";
+import Referees from "./pages/admin/Referees";
+import ShowForm from "./pages/admin/ShowForm";
 
 
 const router = createBrowserRouter([
@@ -34,6 +38,18 @@ const router = createBrowserRouter([
   },{
     path:"/admin/app/dashboard",
     element:<Admin/>
+  },{
+    path:"/admin/app/dashboard/adversaries",
+    element:<Adverseries/>
+  },{
+    path:"/admin/app/dashboard/matches",
+    element:<Matches/>
+  },{
+    path:"/admin/app/dashboard/referees",
+    element:<Referees/>
+  },{
+    path:"/admin/app/dashboard/form",
+    element:<ShowForm/>
   },{
     path:"*",
     element:<NotFound/>

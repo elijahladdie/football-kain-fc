@@ -9,10 +9,7 @@ const Form = () => {
         setSelectValue({ [e.target.name]: e.target.value })
         console.log(selectValue.name)
     }
-    // const handleFormData = (e) => {
-    //     ({ [e.target.name]: e.target.value })
-    //    
-    // }
+  
     const handleFormData = useCallback(
         (e) => {
             setInputValue({ ...inputValue, [e.target.name]: e.target.value });
