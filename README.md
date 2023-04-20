@@ -1,5 +1,5 @@
 ## Kain fc
-## Web application to help team manager create,read,update and delete  actions that are being carried out by team.
+## CRUD based full stack application.
 
 > The keyword for this web application is to develop digital world through developing problem solving application
 >
@@ -11,15 +11,15 @@
 
 this application use ``Reactjs`` for front end and ``nodejs`` for backend
 
-## This application:
- - Is also crud based application.
- - Admin can create,update,delete and view data in database.
+## This application  enable admin to:
+ - create,update,delete and view data in database.
  - Use sequelize to perform different sql queries
- - Admin must login before accessing the dashboard
+ - Login before accessing the dashboard
  
  ![Screenshot (1)](https://user-images.githubusercontent.com/68749686/233442830-45d8d43d-9ea7-4cdd-a17a-5ed78752faa3.png)
  
  - It compatible with has error handling ``sweetalerties``
+ 
  ![Screenshot (5)](https://user-images.githubusercontent.com/68749686/233442923-5edd6fe9-71a6-46aa-8c93-b95a8f95dd23.png)
  
  - Dashboard contain progess bars tha contain the performance of the team
