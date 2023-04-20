@@ -28,3 +28,9 @@ this application use ``Reactjs`` for front end and ``nodejs`` for backend
   ``This pic is for admin dashboard
 
 ![Screenshot (7)](https://user-images.githubusercontent.com/68749686/233443291-1ad5d0a9-4705-4270-ad1a-ab36e569c77a.png)
+
+
+
+# To start my application install nodejs and type git clone enter the url of this site
+## locate client directory and type npm install
+## locate server directory and type npm install also
