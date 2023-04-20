@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "./db";
-import { Matches } from "./matches.model";
 
 // Table Adversary
  const Adversary = sequelize.define(

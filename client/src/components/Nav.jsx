@@ -27,7 +27,6 @@ useEffect(()=>{
         <div className={`text-sm    lg:flex-grow`}>
           {[
             ['Home', '/'],
-            ['Team', '/team'],
             ['Match', '/match'],
             ['Announcements', '/announcements'],
             ['Projects', '/projects'],
@@ -37,7 +36,7 @@ useEffect(()=>{
 
         </div>
         <div>
-          <a href='/admin/portal/login' className="mx-3 block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">Account</a>
+          <a href='/admin/portal/auth' className="mx-3 block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">Account</a>
 
         </div>
       </div>

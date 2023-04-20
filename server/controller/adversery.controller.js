@@ -7,7 +7,7 @@ export const adversaryCreate = async (req, res) => {
     return res.send({ error: error.details[0].message });
   }
   await Adversary.create(req.body);
-  return res.send({ message: "New adversary Created" });
+  return res.send({ message: "New adversary created" });
 };
 
 export const testJoi = (req, res) => {
@@ -18,18 +18,18 @@ export const deleteAdversary = async (req, res) => {
   const id = req.params.id;
   const alive = await Adversary.findOne({
     where: {
-      id: id,
+      Ad_id: id,
     },
   });
   if (!alive) {
-    return res.send({ message: " adversary Already deleted" });
+    return res.send({ message: " Adversary already deleted" });
   } else {
     Adversary.destroy({
       where: {
-        id: id,
+        Ad_id: id,
       },
     });
-    return res.send({ message: " adversary deleted" });
+    return res.send({ message: " Adversary deleted" });
   }
 };
 
@@ -46,6 +46,6 @@ export const getAdversary = async (req, res) => {
 
 export const updateAdversary = async (req, res) => {
   const id = req.params.id;
-  const updateAdversary = await Adversary.update(req.body, { where: { id: id } });
-  return res.send({ message: "adversary successfull updated" });
+  const updateAdversary = await Adversary.update(req.body, { where: {   Ad_id: id,} });
+  return res.send({ message: "Adversary successfull updated" });
 };

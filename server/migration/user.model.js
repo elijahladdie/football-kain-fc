@@ -1,24 +1,20 @@
 import { DataTypes } from "sequelize";
 import sequelize from "./db";
 import { Matches } from "./matches.model";
-import { Adversary } from "./adversary.model";
-import {Referees} from "./referees.model"
+
 
 const User = sequelize.define(
   "Users",
   {
-    id: {
+    user_id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
-    },
-    Name: {
-      type: DataTypes.STRING,
-    },
+    },  
     u_Name: {
       type: DataTypes.STRING,
     },
-    u_Password: {
+    u_password: {
       type: DataTypes.STRING,
     },
     userType:{type: DataTypes.STRING,

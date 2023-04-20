@@ -1,4 +1,4 @@
-import { Match } from "../migration/matches.model";
+import { Matches } from "../migration/matches.model";
 import { validateMatch } from "../helpers/Matches.validator";
 export const MatchCreate = async (req, res) => {
   // check Validation
@@ -6,7 +6,7 @@ export const MatchCreate = async (req, res) => {
   if (error) {
     return res.send({ error: error.details[0].message });
   }
-  await Match.create(req.body);
+  await Matches.create(req.body);
   return res.send({ message: "New Match Created" });
 };
 
@@ -16,17 +16,17 @@ export const testJoi = (req, res) => {
 
 export const deleteMatch = async (req, res) => {
   const id = req.params.id;
-  const alive = await Match.findOne({
+  const alive = await Matches.findOne({
     where: {
-      id: id,
+      Mt_id: id,
     },
   });
   if (!alive) {
     return res.send({ message: " Match Already deleted" });
   } else {
-    Match.destroy({
+    Matches.destroy({
       where: {
-        id: id,
+        Mt_id: id,
       },
     });
     return res.send({ message: " Match deleted" });
@@ -34,18 +34,18 @@ export const deleteMatch = async (req, res) => {
 };
 
 export const allMatch = async (req, res) => {
-  const Match = await Match.findAll();
+  const match = await Matches.findAll();
 
-  return res.send({ Match });
+  return res.send({ match });
 };
 export const getMatch = async (req, res) => {
   const id = req.params.id;
-  const Match = await Match.findByPk(id);
-  return res.send({ Match });
+  const match = await Matches.findByPk(id);
+  return res.send({ match });
 };
 
 export const updateMatch = async (req, res) => {
   const id = req.params.id;
-  const updateMatch = await Match.update(req.body, { where: { id: id } });
+  const updateMatch = await Matches.update(req.body, { where: { Mt_id: id } });
   return res.send({ message: "Match successfull updated" });
 };

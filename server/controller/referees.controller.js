@@ -7,7 +7,7 @@ export const refereeCreate = async (req, res) => {
     return res.send({ error: error.details[0].message });
   }
   await Referees.create(req.body);
-  return res.send({ message: "New referee Created" });
+  return res.send({ message: "New referee registered." });
 };
 
 export const testJoi = (req, res) => {
@@ -18,18 +18,18 @@ export const deleteReferee = async (req, res) => {
   const id = req.params.id;
   const alive = await Referees.findOne({
     where: {
-      id: id,
+      Ref_id: id,
     },
   });
   if (!alive) {
-    return res.send({ message: " referee Already deleted" });
+    return res.send({ message: " Referee already deleted." });
   } else {
-    referee.destroy({
+    Referees.destroy({
       where: {
-        id: id,
+        Ref_id: id,
       },
     });
-    return res.send({ message: " referee deleted" });
+    return res.send({ message: " Referee deleted." });
   }
 };
 
@@ -46,6 +46,6 @@ export const getReferee = async (req, res) => {
 
 export const updateReferee = async (req, res) => {
   const id = req.params.id;
-  const updatereferee = await Referees.update(req.body, { where: { id: id } });
-  return res.send({ message: "referee successfull updated" });
+  const updatereferee = await Referees.update(req.body, { where: { Ref_id: id } });
+  return res.send({ message: "Referee  updated." });
 };

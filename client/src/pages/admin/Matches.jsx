@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import MatchList from '../../components/admin/MatchList';
 import Nav from '../../components/admin/Nav'
 import Loading from '../../components/Loading';
-import Form from '../../components/admin/Form';
+import ToggleMatch from '../../components/admin/toggleMatch';
+import Auth from '../../components/admin/Auth';
+
 
 
 const Matches = () => {
   const [loading, setLoading] = useState(true)
-  useEffect(() => {
+  useEffect(() => {    
     setTimeout(() => setLoading(false), 300)
   }, [])
   if (loading) {
@@ -16,7 +18,9 @@ const Matches = () => {
   return (
     <div  className='min-h-screen dark:bg-gray-900'>
       <Nav />
-      <span className='w-64'/>
+      <Auth/>
+      
+     <ToggleMatch/>
       <MatchList  />
     </div>
   )

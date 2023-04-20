@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/form/login";
-import Team from "./pages/Team";
 import Match from "./pages/Match";
 import Announcement from "./pages/Announcement";
 import Projects from "./pages/Projects";
@@ -13,16 +12,13 @@ import Admin from "./pages/admin/Admin";
 import Adverseries from "./pages/admin/Adverseries";
 import Matches from "./pages/admin/Matches";
 import Referees from "./pages/admin/Referees";
-import ShowForm from "./pages/admin/ShowForm";
+import Logout from "./pages/form/Logout";
 
 
 const router = createBrowserRouter([
   {
     path:"/",
     element:<Home/>
-  },{
-    path:"/team",
-    element:<Team/>
   },{
     path:"/match",
     element:<Match/>
@@ -33,7 +29,7 @@ const router = createBrowserRouter([
     path:"/projects",
     element:<Projects/>
   },{
-    path:"/admin/portal/login",
+    path:"/admin/portal/auth",
     element:<Login/>
   },{
     path:"/admin/app/dashboard",
@@ -48,8 +44,8 @@ const router = createBrowserRouter([
     path:"/admin/app/dashboard/referees",
     element:<Referees/>
   },{
-    path:"/admin/app/dashboard/form",
-    element:<ShowForm/>
+    path:"/admin/app/dashboard/logout",
+    element:<Logout/>
   },{
     path:"*",
     element:<NotFound/>

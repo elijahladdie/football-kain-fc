@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "./db";
-import { User } from "./user.model";
-import { Adversary } from "./adversary.model";
+
 
 // Table Matches
 const Matches = sequelize.define(
@@ -13,7 +12,7 @@ const Matches = sequelize.define(
       primaryKey: true,
     },
     Date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
     Play_Ground: {
       type: DataTypes.STRING,
@@ -36,6 +35,6 @@ const Matches = sequelize.define(
 
 sequelize
   .sync()
-  .then(() => console.log(" Matches"))
+  .then(() => console.log(" Matches "))
   .catch((error) => console.log(error.message));
 export { Matches }

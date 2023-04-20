@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import MatchList from '../../components/admin/MatchList';
 import Nav from '../../components/admin/Nav'
 import Loading from '../../components/Loading';
-import Form from '../../components/admin/Form';
-import Dashboard from '../../components/admin/Dashboard';
-import AdverserieesList from "../../components/admin/AdveserieesList"
+import AdverseryList from "../../components/admin/AdvesaryList"
+import ToggleAdversery from '../../components/admin/ToggleAdvery';
+import Auth from '../../components/admin/Auth';
 
 
 const Adverseries = () => {
   const [loading, setLoading] = useState(true)
+    
   useEffect(() => {
     setTimeout(() => setLoading(false), 300)
   }, [])
@@ -17,12 +17,12 @@ const Adverseries = () => {
   }
   return (
     <div  className='min-h-screen dark:bg-gray-900'>
+      <Auth/>
       <Nav />
       <span className='w-64'/>
-      {/* <MatchList  /> */}
-      {/* <Form /> */}
-      {/* <Dashboard/> */}
-      <AdverserieesList/>
+    
+      <ToggleAdversery/>
+      <AdverseryList/>
     </div>
   )
 }

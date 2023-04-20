@@ -13,14 +13,14 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div class=" bg-gray-50 dark:bg-gray-700 min-screen-xl py-3 " >
-        <button type="button"  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-          <svg aria-hidden="true"  class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+      <div className=" bg-gray-50 dark:bg-gray-700 min-screen-xl py-3 " >
+        <button type="button"  className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+          <svg aria-hidden="true"  className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
 
-          <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>STAFF</span>
-          <svg sidebar-toggle-item class="w-6 h-6" onClick={() => setView((open) => !open)} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          <span className="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>STAFF</span>
+          <svg sidebar-toggle-item className="w-6 h-6" onClick={() => setView((open) => !open)} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
         </button>
-        <div id="dropdown-example " class={` ${view ? 'hidden' : ''} py-2 items-center justify-evenly flex-col sm:flex-row space-y-2 flex `}>
+        <div id="dropdown-example " className={` ${view ? 'hidden' : ''} py-2 items-center justify-evenly flex-col sm:flex-row space-y-2 flex `}>
           {[
             
             ['President',"Jeff MUHINYUZA"],
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
 
       </div>
-      <div className="flex w-full justify-center py-3">
+      <div className="flex w-screen justify-evenly py-3 items-center">
       <Example label="">
         <AnimatedProgressProvider
           valueStart={0}
