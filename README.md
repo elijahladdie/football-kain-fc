@@ -33,4 +33,6 @@ this application use ``Reactjs`` for front end and ``nodejs`` for backend
 
 # To start my application install nodejs and type git clone enter the url of this site
 ## locate client directory and type npm install
+# Then type ``npm start``
 ## locate server directory and type npm install also
+# Then type ``npm start``
