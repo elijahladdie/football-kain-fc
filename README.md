@@ -31,6 +31,31 @@ this application use ``Reactjs`` for front end and ``nodejs`` for backend
 
 
 
-# To start my application install nodejs and type git clone enter the url of this site
-## locate client directory and type npm install
-## locate server directory and type npm install also
+# To start this application
+ - install ![Node Js](https://nodejs.org/en)
+ - install ![Git cli](https://git-scm.com/download/)
+ - copy and paste this command below
+ ```sh
+git clone -b v.1.1 https://github.com/elijahladdie/football-kain-fc.git
+ ```
+- open project directory
+## starting frontend server
+- locate client directory and type
+- 
+```sh
+npm install
+```
+- then type
+```sh
+npm start
+```
+## starting backend server
+
+- locate server directory and type npm install
+```sh
+npm install
+```
+- then type
+```sh
+npm start
+```
